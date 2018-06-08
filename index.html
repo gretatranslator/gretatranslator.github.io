@@ -4,29 +4,36 @@
 
 
 
-function alertDiv(){
-
-
-}
+function alertClean(){
+	var i = 0;
+	i = document.getElementById("outputdiv");
+	i.innerHTML = "test value 42";
+} // end of fucntion 
 
 
 
 function checkAnswer(){
 var myInput = prompt("Pick one")
   if (myInput == 1){
-  alertDiv("hola");
+
+  	// pretty output 
+  	alertClean("hola");
+	
+  	// ugly output
+	alert("hola");
+
 } if (myInput == 2){
-  alert("gato");
+  	alert("gato");
 } if (myInput == 3){
-  alert("casa");
+  	alert("casa");
 } if (myInput == 4){
-  alert("adiós");
+  	alert("adiós");
 } if (myInput == 5){
-  alert("cómo estás");
+  	alert("cómo estás");
 } if (myInput == 6){
-  alert("restaurante");
+  	alert("restaurante");
 } if (myInput == 7){
-  alert("dormir");
+  	alert("dormir");
 }
 }
 
