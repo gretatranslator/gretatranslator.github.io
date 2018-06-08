@@ -1,0 +1,9 @@
+.cleanpadding {
+padding: 3%;
+margin: 3%;
+background-color: yellow;
+text-align: center;
+float: right;
+clear: both;
+/* no other ojbects are allowed both right and left */
+}

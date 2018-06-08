@@ -1,42 +1,38 @@
 <head>
 <title>Jacob's Spanish translator </title>
+<link rel="stylesheet" type="text/css" href="fp.css">
+
 <script type="text/javascript">
 
+// missing forms, innerHTML, functions with parameters
+// we build this function so no more popups 
 
-
-function alertClean(){
+function alertClean( ourMessage ){
 	var i = 0;
-	i = document.getElementById("outputdiv");
-	i.innerHTML = "test value 42";
+	i = document.getElementById("output");
+	i.innerHTML =  ourMessage  ;
 } // end of fucntion 
 
-
-
 function checkAnswer(){
-var myInput = prompt("Pick one")
+	var myInput = 0;
+	myInput = document.getElementById("output");
+	myInput = myForm.myText.value;
   if (myInput == 1){
-
-  	// pretty output 
   	alertClean("hola");
-	
-  	// ugly output
-	// alert("hola");
-
 } if (myInput == 2){
-  	alert("gato");
+  	alertClean("gato");
 } if (myInput == 3){
-  	alert("casa");
+  	alertClean("casa");
 } if (myInput == 4){
-  	alert("adiós");
+  	alertClean("adiós");
 } if (myInput == 5){
-  	alert("cómo estás");
+  	alertClean("cómo estás");
 } if (myInput == 6){
-  	alert("restaurante");
+  	alertClean("restaurante");
 } if (myInput == 7){
-  	alert("dormir");
+  	alertClean("dormir");
 }
 }
-
 
 </script>
 
@@ -44,34 +40,34 @@ var myInput = prompt("Pick one")
 
 <body>
 
-<button onclick="checkAnswer()">
-Pick a word
-</button>	
-
-
 <p>Spanish to english translator</p>
 
-
-<div id="outputdiv" >
-output div. please wait.  7
+<div id="cleanpadding">
+<form name="myForm">
+	Type a number 1 to 7
+	<input name="myText" type="text">
+</form>
 </div>
 
+<div id="cleanpadding">
+	<button onclick="checkAnswer()">
+	Click here
+	</button>	
+</div>
 
-
+<div id="output" >
+output please wait. 
+</div>
+<div id="cleanpadding">
 <p>
-possible translations:
-1) hello
-2) cat
-3) house
+possible translations:<br></br>
+1) hello<br></br>
+2) cat<br></br>
+3) house<br></br>
 4) goodbye<br></br>
-5) how are you
-6) resturant
-7) sleep
+5) how are you<br></br>
+6) resturant<br></br>
+7) sleep<br></br>
 </p>
-
-
-
-
-
-
+</div>
 </body>
